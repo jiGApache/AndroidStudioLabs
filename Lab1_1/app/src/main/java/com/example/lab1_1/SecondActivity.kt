@@ -1,12 +1,10 @@
 package com.example.lab1_1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_second.*
-import java.lang.reflect.Array
+import androidx.recyclerview.widget.RecyclerView
 
 class SecondActivity : AppCompatActivity() {
 
@@ -14,13 +12,23 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val users : ArrayList<String> = ArrayList()
-        for(i in 1..100){
-            users.add("String #$i")
+        var values: ArrayList<Int> = ArrayList()
+
+        for(i in 1..999999){
+            values.add(i)
         }
 
-        recycleView.layoutManager = LinearLayoutManager(this)
-        recycleView.adapter = UsersAdapter(users)
+        val recyclerView: RecyclerView = findViewById(R.id.myRecycleView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = MyAdapter(values, this)
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(Intent.ACTION_MAIN)
+        intent.addCategory(Intent.CATEGORY_HOME)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP;
+        startActivity(intent)
     }
 }
 
