@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Lab2</string>
+
+    <string-array name="catsTitles">
+        <item>Васька</item>
+        <item>Барсик</item>
+        <item>Мурзик</item>
+        <item>Рыжик</item>
+    </string-array>
+    <string-array name="catDescriptions">
+        <item>Васька слушает да ест</item>
+        <item>Барсик хочет в Барселону</item>
+        <item>Мурзик выписал Мурзилку</item>
+        <item>Рыжик рычит на рыбок</item>
+    </string-array>
+</resources>
