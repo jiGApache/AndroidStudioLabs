@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lab7</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Front</string>
+    <string name="tab_text_2">Back</string>
+    <string name="cost">Цена за один: %1$.2f</string>
+    <string name="cost_all">Итого: %1$.2f</string>
+</resources>
